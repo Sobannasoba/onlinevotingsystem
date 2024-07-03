@@ -3,7 +3,7 @@ import mysql from 'mysql';
 export function fetchUsers() {
   return new Promise((resolve, reject) => {
     const connection = mysql.createConnection({
-      host: '128.199.118.198',
+      host: 'firaz-api.site',
       user: 'root',
       password: '',
       database: 'db_fyp'

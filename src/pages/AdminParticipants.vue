@@ -43,7 +43,7 @@ export default {
     },
     async fetchParticipants() {
       try {
-        const response = await axios.get('https://128.199.118.198/fyp/config/participants.php');
+        const response = await axios.get('https://firaz-api.site/fyp/config/participants.php');
         this.participants = response.data;
       } catch (error) {
         console.error('Error fetching parcipants:', error);
@@ -77,10 +77,10 @@ export default {
         console.log('Email:', this.email);
         console.log('Phone:', this.phone);
         if (this.id ==""){
-            var url = "https://128.199.118.198/fyp/config/insert_participant.php"
+            var url = "https://firaz-api.site/fyp/config/insert_participant.php"
         }
         else{
-            var url = "https://128.199.118.198/fyp/config/update_participant.php"
+            var url = "https://firaz-api.site/fyp/config/update_participant.php"
         }
         const formData = new FormData();
         formData.append('id', this.id);
@@ -107,7 +107,7 @@ export default {
     deletePopup(index){
         const formData = new FormData();
         formData.append('id', index);
-        axios.post("https://128.199.118.198/fyp/config/delete_participant.php", formData)
+        axios.post("https://firaz-api.site/fyp/config/delete_participant.php", formData)
         .then(response => {
             console.log(response.data);
             alert(response.data)

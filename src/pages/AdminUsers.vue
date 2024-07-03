@@ -25,7 +25,7 @@ export default {
         },
         async fetchUsers() {
             try {
-                const response = await axios.get('https://128.199.118.198/fyp/config/users.php');
+                const response = await axios.get('https://firaz-api.site/fyp/config/users.php');
                 this.users = response.data;
             } catch (error) {
                 console.error('Error fetching users:', error);

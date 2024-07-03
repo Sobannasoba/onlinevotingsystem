@@ -19,7 +19,7 @@ export default {
   methods: {
     async fetchParticipants() {
       try {
-        const response = await axios.get('https://128.199.118.198/fyp/config/participants.php');
+        const response = await axios.get('https://firaz-api.site/fyp/config/participants.php');
         this.groupByPosition(response.data);
       } catch (error) {
         console.error('Error fetching participants:', error);
@@ -45,7 +45,7 @@ export default {
           formData.append(`participant_vote_ids[]`, this.selectedVotes[position]);
         }
 
-        const response = await axios.post('https://128.199.118.198/fyp/config/insert_multiple_votes.php', formData);
+        const response = await axios.post('https://firaz-api.site/fyp/config/insert_multiple_votes.php', formData);
         console.log(response.data);
         alert(response.data);
         router.push("/");

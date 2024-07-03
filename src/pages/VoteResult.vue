@@ -58,7 +58,7 @@
         // Fetch the vote data from the server and store it in this.votes
         // This is where you would make an API call or retrieve the data from a store
         try {
-                const response = await axios.get('https://128.199.118.198/fyp/config/vote_results.php');
+                const response = await axios.get('https://firaz-api.site/fyp/config/vote_results.php');
                 this.votes = response.data;
             } catch (error) {
                 console.error('Error fetching users:', error);
