@@ -1,0 +1,114 @@
+{"questionDetails": [
+    {
+        "trees": [
+            {
+                "questions": [
+                    {
+                        "answerType": "DPD",
+                        "answers": [
+                            {
+                                "answerId": "A40221",
+                                "answerPhrase": "None"
+                            }
+                        ],
+                        "optional": false,
+                        "questionId": "Q65038",
+                        "questionPhrase": "Is the customer using a protective case or film on the device?"
+                    }
+                ],
+                "treeId": "TREE208709"
+            }
+        ]
+    }
+]}
+
+{
+    "notes": [
+        {
+            "type": "CUSTOMER_INTAKE_NOTES",
+            "content": "BURN MARK IN SCREEN"
+        },
+        {
+            "type": "TECHNICIAN",
+            "content": "CHANGE DISPLAY"
+        }
+    ],
+    "parts": [
+        {
+            "number": "661-21993",
+            "componentIssue": {
+                "issueCode": "IP056",
+                "componentCode": "26095G",
+                "reproducibility": "B"
+            },
+            "coverageOption": "VMI_YELLOW"
+        }
+    ],
+    "device": {
+        "id": "F9NV6V0TTV"
+    },
+    "customer": {
+        "address": [
+            {
+                "city": "PETALING JAYA",
+                "line1": "41-M, JALAN SS2/64",
+                "stateCode": "12",
+                "postalCode": "47300",
+                "countryCode": "MYS"
+            }
+        ],
+        "lastName": "TECH",
+        "firstName": "UNI",
+        "companyName": "SECOND LIFE ASIA SDN. BHD.",
+        "emailAddress": "UNI.TECH@GMAIL.COM",
+        "primaryPhone": "0143420802",
+        "phoneCountryCd": "MY",
+        "sendSMSOnPrimaryPhone": false
+    },
+    "repairId": "G621235903",
+    "repairType": "CIN",
+    "technicianId": "M20D81E906",
+    "componentIssues": [
+        {
+            "type": "CUST",
+            "order": 1,
+            "priority": 1,
+            "issueCode": "IP056",
+            "componentCode": "26095G"
+        },
+        {
+            "type": "TECH",
+            "order": 1,
+            "priority": 1,
+            "issueCode": "IP056",
+            "componentCode": "26095G"
+        }
+    ],
+    "questionDetails": [
+        {
+            "templateId": "T2002158",
+            "trees": [
+                {
+                    "treeId": "TREE208709",
+                    "questions": [
+                        {
+                            "answers": [
+                                {
+                                    "answerId": "A40221",
+                                    "answerPhrase": "None"
+                                }
+                            ],
+                            "optional": false,
+                            "answerType": "DPD",
+                            "questionId": "Q65038",
+                            "questionPhrase": "Is the customer using a protective case or film on the device?"
+                        }
+                    ]
+                }
+            ],
+        }
+    ],
+    "purchaseOrderNumber": "CI/SEG/2024040802",
+    "repairClassification": "DIRECT",
+    "unitReceivedDateTime": "2024-04-08T03:50:53.356Z"
+}
