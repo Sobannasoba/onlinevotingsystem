@@ -39,7 +39,7 @@
             const formData = new FormData();
             formData.append('username', this.username);
             formData.append('password', this.password);
-          const response = await axios.post('http://128.199.118.198/fyp/config/login.php', formData);
+          const response = await axios.post('https://128.199.118.198/fyp/config/login.php', formData);
   
           if (response.data.success) {
             localStorage.setItem('isLoggedIn', 'true');

@@ -25,7 +25,7 @@ import Headers from '../components/headers.vue';
         formData.append('email', this.form.email);
         formData.append('password', this.form.password);
 
-        axios.post('http://128.199.118.198/fyp/config/insert_user.php', formData)
+        axios.post('https://128.199.118.198/fyp/config/insert_user.php', formData)
             .then(response => {
             if (response.status === 200) {
                 // Success

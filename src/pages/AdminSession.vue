@@ -63,7 +63,7 @@
             const formData = new FormData();
             formData.append('start_vote', this.startTime);
             formData.append('end_vote', this.endTime);
-            axios.post('http://128.199.118.198/fyp/config/insert_session.php', formData)
+            axios.post('https://128.199.118.198/fyp/config/insert_session.php', formData)
             .then(response => {
                 console.log(response.data);
                 alert(response.data)

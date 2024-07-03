@@ -92,7 +92,7 @@ router.beforeEach(async (to, from, next) => {
   console.log(window.location.href)
   
   try {
-    const response = await axios.get('http://128.199.118.198/fyp/config/session.php');
+    const response = await axios.get('https://128.199.118.198/fyp/config/session.php');
     var sessions = response.data
     const now = new Date()
 
