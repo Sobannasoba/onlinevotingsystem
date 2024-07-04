@@ -48,21 +48,24 @@ export default {
             });
         },
         deleteUser(id){
-            const formData = new FormData();
-            formData.append('id', id);
-            axios.post("https://firaz-api.site/fyp/config/delete_user.php", formData)
-            .then(response => {
-                console.log(response.data);
-                alert(response.data)
-                if (response.status == 200){
-                    this.fetchUsers();
-                }
-                // Handle the response as needed
-            })
-            .catch(error => {
-                console.error(error);
-                // Handle the error as needed
-            });
+            if (id !== 1){
+                const formData = new FormData();
+                formData.append('id', id);
+                axios.post("https://firaz-api.site/fyp/config/delete_user.php", formData)
+                .then(response => {
+                    console.log(response.data);
+                    alert(response.data)
+                    if (response.status == 200){
+                        this.fetchUsers();
+                    }
+                    // Handle the response as needed
+                })
+                .catch(error => {
+                    console.error(error);
+                    // Handle the error as needed
+                });
+            }
+            
         }
     }
 };
