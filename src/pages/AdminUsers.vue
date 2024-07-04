@@ -38,7 +38,7 @@ export default {
                 console.log(response.data);
                 alert(response.data)
                 if (response.status == 200){
-                    this.closePopup();
+                    this.fetchUsers();
                 }
                 // Handle the response as needed
             })
@@ -55,7 +55,7 @@ export default {
                 console.log(response.data);
                 alert(response.data)
                 if (response.status == 200){
-                    this.closePopup();
+                    this.fetchUsers();
                 }
                 // Handle the response as needed
             })
