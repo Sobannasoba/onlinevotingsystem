@@ -96,6 +96,7 @@ export default {
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Role</th>
+                                            <th>Class</th>
                                             <th>Created At</th>
                                             <th>Updated At</th>
                                             <th>
@@ -112,6 +113,7 @@ export default {
                                             <td>{{ user.name }}</td>
                                             <td>{{ user.email }}</td>
                                             <td>{{ user.role }}</td>
+                                            <td>{{ user.class }}</td>
                                             <td>{{ formatDate(user.created_at) }}</td>
                                             <td>{{ formatDate(user.updated_at) }}</td>
                                             <td>
