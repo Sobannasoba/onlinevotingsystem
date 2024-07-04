@@ -23,7 +23,7 @@ import Headers from '../components/headers.vue';
         formData.append('no_ic_or_no_metric', this.form.no_ic_or_no_metric);
         formData.append('name', this.form.name);
         formData.append('email', this.form.email);
-        formData.append('password', this.form.password);
+        formData.append('class', this.form.class);
 
         axios.post('https://firaz-api.site/fyp/config/insert_user.php', formData)
             .then(response => {
@@ -69,7 +69,7 @@ import Headers from '../components/headers.vue';
         </div>
         <div class="form-group">
           <label for="phone">Class</label>
-          <input type="tel" class="form-control" id="password" v-model="form.class">
+          <input type="text" class="form-control" id="password" v-model="form.class">
         </div>
       </form>
       <button @click="submitForm" class="btn btn-primary">Submit</button>
