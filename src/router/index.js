@@ -14,8 +14,8 @@ import LoginPage from '../pages/AdminLogin.vue'
 import axios from 'axios'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  base: '/onlinevotingsystem/',
+  history: createWebHistory(),//(import.meta.env.BASE_URL),
+  //base: '/onlinevotingsystem/',
   routes: [
     {
       path: '/',
