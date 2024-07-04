@@ -92,6 +92,7 @@ router.beforeEach(async (to, from, next) => {
   console.log(window.location.href)
   
   try {
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'; 
     const response = await axios.get('https://firaz-api.site/fyp/config/session.php');
     var sessions = response.data
     const now = new Date()
