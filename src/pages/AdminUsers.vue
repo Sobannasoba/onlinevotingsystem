@@ -30,6 +30,39 @@ export default {
             } catch (error) {
                 console.error('Error fetching users:', error);
             }
+        },
+        deleteUsers(){
+            const formData = new FormData();
+            axios.post("https://firaz-api.site/fyp/config/delete_users.php", formData)
+            .then(response => {
+                console.log(response.data);
+                alert(response.data)
+                if (response.status == 200){
+                    this.closePopup();
+                }
+                // Handle the response as needed
+            })
+            .catch(error => {
+                console.error(error);
+                // Handle the error as needed
+            });
+        },
+        deleteUser(id){
+            const formData = new FormData();
+            formData.append('id', id);
+            axios.post("https://firaz-api.site/fyp/config/delete_user.php", formData)
+            .then(response => {
+                console.log(response.data);
+                alert(response.data)
+                if (response.status == 200){
+                    this.closePopup();
+                }
+                // Handle the response as needed
+            })
+            .catch(error => {
+                console.error(error);
+                // Handle the error as needed
+            });
         }
     }
 };
@@ -62,6 +95,11 @@ export default {
                                             <th>Role</th>
                                             <th>Created At</th>
                                             <th>Updated At</th>
+                                            <th>
+                                            <button type="button" class="btn btn-primary mx-5" @click="deleteUsers">
+                                                Delete All User
+                                            </button>
+                                        </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -73,6 +111,11 @@ export default {
                                             <td>{{ user.role }}</td>
                                             <td>{{ formatDate(user.created_at) }}</td>
                                             <td>{{ formatDate(user.updated_at) }}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary mx-5" @click="deleteUser(user.id)">
+                                                    Delete
+                                            </button>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
