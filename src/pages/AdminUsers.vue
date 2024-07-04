@@ -25,8 +25,7 @@ export default {
         },
         async fetchUsers() {
             try {
-                process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'; 
-    const response = await axios.get('https://firaz-api.site/fyp/config/users.php');
+                const response = await axios.get('https://firaz-api.site/fyp/config/users.php');
                 this.users = response.data;
             } catch (error) {
                 console.error('Error fetching users:', error);

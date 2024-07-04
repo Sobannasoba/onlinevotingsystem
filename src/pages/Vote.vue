@@ -19,8 +19,7 @@ export default {
   methods: {
     async fetchParticipants() {
       try {
-        process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'; 
-    const response = await axios.get('https://firaz-api.site/fyp/config/participants.php');
+        const response = await axios.get('https://firaz-api.site/fyp/config/participants.php');
         this.groupByPosition(response.data);
       } catch (error) {
         console.error('Error fetching participants:', error);
